@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>test - 하나유월’s 데이터베이스</title>
-<meta name="description" content="Neural News Recommendation with Multi-Head Self-Attention   EMNLP-IJCNLP 2019 | Nov 2019  Wu. Chuhan, Wu. Fangzhao, Ge. Suyu, Qi. Tao, Huang. Yongfeng, Xie. Xing  Tsinghua University, Microsoft Research Asia  DOI : 10.18653/v1/D19-1671">
+<meta name="description" content="test">
 
 
   <meta name="author" content="하나유월">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/%EB%B3%B4%EC%95%88/test/">
 
 
-  <meta property="og:description" content="Neural News Recommendation with Multi-Head Self-Attention   EMNLP-IJCNLP 2019 | Nov 2019  Wu. Chuhan, Wu. Fangzhao, Ge. Suyu, Qi. Tao, Huang. Yongfeng, Xie. Xing  Tsinghua University, Microsoft Research Asia  DOI : 10.18653/v1/D19-1671">
+  <meta property="og:description" content="test">
 
 
 
@@ -275,15 +275,13 @@
       <!--전체 글 수-->
       <ul>
       <li>
-            <a href="/categories/" class="">전체(2)</a>
+            <a href="/categories/" class="">전체(1)</a>
       </li>
       </ul>
       <li>
         <span class="nav__sub-title">프로젝트</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
-                
-                    
                 
                     
                 
@@ -295,14 +293,8 @@
                 
                     
                 
-                    
-                        <li><a href="/categories/machine-learning" class="">머신러닝 (1)</a></li>
-                    
-                
             </ul>
             <ul>
-                
-                    
                 
                     
                 
@@ -315,8 +307,6 @@
                 
                     
                         <li><a href="/categories/news/security" class="">보안 (1)</a></li>
-                    
-                
                     
                 
             </ul>
@@ -332,7 +322,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="test">
-    <meta itemprop="description" content="  Neural News Recommendation with Multi-Head Self-Attention  EMNLP-IJCNLP 2019 | Nov 2019 Wu. Chuhan, Wu. Fangzhao, Ge. Suyu, Qi. Tao, Huang. Yongfeng, Xie. Xing Tsinghua University, Microsoft Research Asia DOI : 10.18653/v1/D19-1671">
+    <meta itemprop="description" content="test">
     <meta itemprop="datePublished" content="2022-01-06T00:00:00+09:00">
     
 
@@ -351,52 +341,7 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <blockquote>
-  <h2 id="neural-news-recommendation-with-multi-head-self-attention">Neural News Recommendation with Multi-Head Self-Attention</h2>
-  <p>EMNLP-IJCNLP 2019 | Nov 2019 <br />
-<strong>Wu. Chuhan, Wu. Fangzhao, Ge. Suyu, Qi. Tao, Huang. Yongfeng, Xie. Xing</strong> <br />
-Tsinghua University, Microsoft Research Asia <br />
-DOI : <a href="https://doi.org/10.18653/v1/D19-1671">10.18653/v1/D19-1671</a></p>
-</blockquote>
-
-<blockquote>
-  <h3 id="abstract">Abstract.</h3>
-  <p>이 논문에서는 NRMS(multi-head self-attention)를 사용한 신경망 뉴스 추천 접근 방식을 제안한다. 저자들이 뉴스 추천에서 중요한 관측으로 여기는 몇 가지 중요한 점이 있는데, 첫번째는 뉴스 제목에서 단어간의 상호작용이 뉴스를 이해하는데 중요하단 것이고, 두번째는 뉴스 제목을 표현하는데 있어서 뉴스 제목의 단어가 서로 다른 중요도를 가질 수 있다는 점. 그리고 같은 사용자가 검색한 서로 다른 뉴스도 사용자를 표현하는데 있어 서로 다른 중요도를 가질 수 있다는 점이다. 저자들은 이러한 관측을 Multi-Head Self-Attention을 통해 뉴스 추천을 기존의 방법들보다 더 효과적으로 할 수 있음을 보여준다.</p>
-</blockquote>
-
-<p>해당 논문에서 제시한 모델의 그림은 다음과 같다.</p>
-<p align="center">
-<img src="/assets/images/NRMS_model.png" width="500px" height="500px" />
-</p>
-<p>모델은 크게 유저 인코더와 뉴스 인코더로 나뉘는데, 유저 인코더의 입력으로 뉴스 인코더의 출력이 들어가기 때문에, 뉴스 인코더부터 살펴보도록 하겠다.</p>
-
-<p align="center">
-<img src="/assets/images/NRMS_news_encoder.png" width="200px" height="300px" />
-</p>
-<p>뉴스 인코더는 총 3개의 레이어로 구성된다.</p>
-
-<p>첫번째 레이어는 워드 임베딩 레이어로, 뉴스 제목의 단어들을 sequence of word에서 저차원의 임베딩 벡터 시퀀스로 변환해주는 역할을 한다.</p>
-
-\[\begin{equation}
-[w_1, w_2, ..., w_M] \rightarrow [e_1, e_2, ..., e_M]
-\end{equation}\]
-
-<p>두번째 레이어는 word-level의 multi-head self-attention 네트워크이다. 단어간의 상호작용이 뉴스 표현을 학습하는데 중요하기때문에, 저자들은 단어의 문맥적인 표현을 학습하기 위해서 multi-head self-attention을 사용할 것을 제안했다.</p>
-
-<p>$k$번째 attention head에 의해 학습된 $i$번째 단어의 표현은 다음과 같이 계산된다.</p>
-
-\[\begin{equation}
-\alpha_{i,j}^k = {exp(e_i^TQ_k^we_j)\over \Sigma_{m=1}^M exp(e_i^TQ_k^we_m)}
-\end{equation}\]
-
-\[\begin{equation}
-h_{i,k}^w = V_k^w(\Sigma_{j=1}^M\alpha_{i,j}^ke_j)
-\end{equation}\]
-
-<p>식 2의 $Q_k^w$와 식 3의 $V_k^w$는 $k$번째 self-attention head의 projection parameter들이고,$\alpha_{i,j}^k$는 $i$번째 단어와 $j$번째 단어의 상호작용의 상대적인 중요도를 나타낸다.</p>
-
-<p>multi-head의 표현 $h_i^w$는 $h$개의 개별 self-attention head에서 생성된 $i$번째 단어의 표현들의 concatenation이다.</p>
-
+        <p>test</p>
 
         
       </section>
@@ -450,16 +395,6 @@ h_{i,k}^w = V_k^w(\Sigma_{j=1}^M\alpha_{i,j}^ke_j)
       
 
       
-  <nav class="pagination">
-    
-      <a href="#" class="pagination--pager disabled">이전</a>
-    
-    
-      <a href="/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/Cross-Validation/" class="pagination--pager" title="[ML/사이킷런] Cross Validation (교차검증)
-">다음</a>
-    
-  </nav>
-
     </div>
 
     
