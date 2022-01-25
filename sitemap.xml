@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://danu.dev/about</loc>
+<loc>https://dundole.github.io/about</loc>
 </url>
 <url>
-<loc>https://danu.dev/categories/diary</loc>
+<loc>https://dundole.github.io/categories/diary</loc>
 </url>
 <url>
-<loc>https://danu.dev/categories/react-native</loc>
+<loc>https://dundole.github.io/categories/react-native</loc>
 </url>
 <url>
-<loc>https://danu.dev/categories/recommender-system</loc>
+<loc>https://dundole.github.io/categories/recommender-system</loc>
 </url>
 <url>
-<loc>https://danu.dev/categories/</loc>
+<loc>https://dundole.github.io/categories/</loc>
 </url>
 <url>
-<loc>https://danu.dev/</loc>
+<loc>https://dundole.github.io/</loc>
 </url>
 <url>
-<loc>https://danu.dev/tags/</loc>
+<loc>https://dundole.github.io/tags/</loc>
 </url>
 </urlset>

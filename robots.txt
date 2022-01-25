@@ -1,1 +1,1 @@
-Sitemap: https://danu.dev/sitemap.xml
+Sitemap: https://dundole.github.io/sitemap.xml
